@@ -10,8 +10,16 @@ import com.example.fox28.ruier.R;
 import com.example.fox28.ruier.home.fragment.HomeFragment;
 import com.example.fox28.ruier.home.fragment.MineFragment;
 import com.example.fox28.ruier.patient.fragment.PatientFragment;
+import com.example.fox28.ruier.utils.StatusBarUtils;
 
 
+/**
+ * @Description:    主界面，管理3个fragment
+ * @Company: China Citic Bank
+ * @Author: Scorpion
+ * @Date: 2018/9/19 22:22
+ * @Tags:
+ */
 public class MainActivity extends AppCompatActivity {
 
     private Fragment[] mFragments;      // fragment数组
@@ -22,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        StatusBarUtils.setStatusBarColor(this, R.color.status_bar_color);
         initFragment();
     }
 

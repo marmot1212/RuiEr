@@ -10,7 +10,11 @@ import android.view.ViewGroup;
 import com.example.fox28.ruier.R;
 
 /**
- * A simple {@link Fragment} subclass.
+ * @Description: 患者fragment，主界面的一级界面
+ * @Company: China Citic Bank
+ * @Author: Scorpion
+ * @Date: 2018/9/19 22:22
+ * @Tags:
  */
 public class PatientFragment extends Fragment {
 
