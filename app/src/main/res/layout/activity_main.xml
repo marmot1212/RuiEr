@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.fox28.ruier.MainActivity">
+    tools:context="com.example.fox28.ruier.home.activity.MainActivity">
 
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -38,7 +38,7 @@
             android:id="@+id/rb_patient"
             style="@style/main_tab_btn"
             android:drawableTop="@drawable/p_selector_rb_patient"
-            android:text="诊所"
+            android:text="患者"
             android:textColor="@drawable/p_selector_rb_text" />
         <RadioButton
             android:id="@+id/rb_mine"
