@@ -9,22 +9,51 @@ import android.view.ViewGroup;
 
 import com.example.fox28.ruier.R;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class PatientManagerFragment extends Fragment {
 
 
+    Unbinder unbinder;
+
     public PatientManagerFragment() {
-        // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_patient_manager, container, false);
+        View inflate = inflater.inflate(R.layout.fragment_patient_manager, container, false);
+        unbinder = ButterKnife.bind(this, inflate);
+        return inflate;
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+    /**
+     * 跳转监听事件
+     * @param view
+     */
+    @OnClick({R.id.ll_add_patient, R.id.ll_add_group, R.id.ll_patientgroup_manager, R.id.ll_notice})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.ll_add_patient:   // 添加患者
+                break;
+            case R.id.ll_add_group:     //添加新分组
+                break;
+            case R.id.ll_patientgroup_manager:  //分组管理
+                break;
+            case R.id.ll_notice:        // 通知完善信息
+                break;
+        }
+    }
 }

@@ -1,15 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical"
     tools:context=".patient.fragment.PatientManagerFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="患者管理"
-        android:textSize="@dimen/title1"/>
+    <!--添加患者-->
+    <LinearLayout
+        android:id="@+id/ll_add_patient"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/raw_high_56"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="添加患者"
+            android:textColor="#666"
+            android:textSize="@dimen/title4" />
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/list_arrow_forward" />
+    </LinearLayout>
+
+    <!--添加新分组-->
+    <LinearLayout
+        android:id="@+id/ll_add_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/raw_high_56"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="添加新分组"
+            android:textColor="#666"
+            android:textSize="@dimen/title4" />
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/list_arrow_forward" />
+    </LinearLayout>
+
+    <!--分组管理-->
+    <LinearLayout
+        android:id="@+id/ll_patientgroup_manager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/raw_high_56"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="分组管理"
+            android:textColor="#666"
+            android:textSize="@dimen/title4" />
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/list_arrow_forward" />
+    </LinearLayout>
+
+    <!--提醒患者完善信息-->
+    <LinearLayout
+        android:id="@+id/ll_notice"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/raw_high_56"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="提醒患者完善信息"
+            android:textColor="#666"
+            android:textSize="@dimen/title4" />
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="13dp"
+            android:src="@mipmap/list_arrow_forward" />
+    </LinearLayout>
+
+</LinearLayout>

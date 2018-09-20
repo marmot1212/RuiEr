@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="raw_high_56">56dp</dimen>
     <dimen name="raw_high_48">48dp</dimen>
 
     <!--页面字体以16sp为主，标题18sp，注释14sp-->
