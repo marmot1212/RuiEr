@@ -3,15 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/base_bg"
     tools:context=".patient.fragment.PatientFragment">
 
-    <TextView
-        android:id="@+id/tv_show"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="患者界面"
-        android:textSize="18sp"
-        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/raw_high_48"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_chat"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/p_title_bar_selector"
+            android:text="咨询"
+            android:textStyle="bold"
+            android:textSize="@dimen/title2"
+            android:button="@null"
+            android:textColor="@drawable/p_selector_title_bar_text"
+            />
+        <RadioButton
+            android:id="@+id/rb_patient"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/p_title_bar_selector"
+            android:text="患者管理"
+            android:textSize="@dimen/title2"
+            android:button="@null"
+            android:textColor="@drawable/p_selector_title_bar_text"
+            android:checked="true"
+            />
 
+    </RadioGroup>
 </FrameLayout>

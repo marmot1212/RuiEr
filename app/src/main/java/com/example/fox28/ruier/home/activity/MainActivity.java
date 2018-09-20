@@ -10,7 +10,6 @@ import com.example.fox28.ruier.R;
 import com.example.fox28.ruier.home.fragment.HomeFragment;
 import com.example.fox28.ruier.home.fragment.MineFragment;
 import com.example.fox28.ruier.patient.fragment.PatientFragment;
-import com.example.fox28.ruier.utils.StatusBarUtils;
 
 
 /**

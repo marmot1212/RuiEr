@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="raw_high_48">48dp</dimen>
+
+    <!--页面字体以16sp为主，标题18sp，注释14sp-->
+    <dimen name="title1">22sp</dimen>
+    <dimen name="title2">18sp</dimen>
+    <dimen name="title3">16sp</dimen>
+    <dimen name="title4">14sp</dimen>
+    <dimen name="title5">12sp</dimen>
+    <dimen name="title6">10sp</dimen>
+    <dimen name="title7">8sp</dimen>
+</resources>
