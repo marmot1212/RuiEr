@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="irc_text_ss">10sp</dimen>
+    <dimen name="irc_text_s">13sp</dimen>
+    <dimen name="irc_text_m">14sp</dimen>
+    <dimen name="irc_text_l">16sp</dimen>
+    <dimen name="irc_text_xl">18sp</dimen>
+    <dimen name="irc_text_xxl">22sp</dimen>
+    <dimen name="fixed_height_bottom_padding">6dp</dimen>
+    <dimen name="divider_h">1dp</dimen>
+    <dimen name="divider_h_30">30dp</dimen>
+    <dimen name="divider_padding_left">12dp</dimen>
+    <dimen name="divider_padding_right">12dp</dimen>
+</resources>

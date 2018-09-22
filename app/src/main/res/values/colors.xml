@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#ffae20</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">@color/colorPrimary</color>
 
+    <!--可以删除，合并后，这些变量的应用场景会删掉-->
     <color name="line_color">#dbdbdb</color>
-    <color name="white">#fff</color>
     <color name="base_color">#ffae20</color>
     <color name="base_gray">#999999</color>
     <color name="status_bar_color">#ddd</color>
+    <!--可以删除，end-->
+
+
+    <!--页面背景色-->
     <color name="base_bg">#f5f5f5</color>
+
+
+    <color name="titlebgcolor">#3F51B5</color>
+    <color name="appBgColor">#F5F5F5</color>
+    <color name="titleBarColor">@color/white</color>
+    <color name="titleBarTextColor">#000000</color>
+    <color name="tabLineColor">@color/colorPrimary</color>
+    <color name="bottomTabTextHighlightColor">#ffae20</color>
+
+    <color name="edtxt_line">#CCD5DE</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="logintxt">#B8C3CE</color>
+
+    <color name="btnUnPressedColor">#ffae20</color>
+    <color name="btnPressedColor">#ffe259</color>
+
+    <color name="colorTextLightGray">#cccccc</color>
+    <color name="colorTextGray">#999999</color>
+    <color name="colorTextDarkGray">#666666</color>
+    <color name="colorTextBlack">#000000</color>
+    <color name="colorTextWhite">#ffffff</color>
+    <color name="colorTextYellow">@color/colorPrimary</color>
+    <color name="dividerColor">#eeeeee</color>
+
 </resources>
