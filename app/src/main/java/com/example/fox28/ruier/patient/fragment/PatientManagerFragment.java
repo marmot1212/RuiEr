@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.fox28.ruier.R;
+import com.example.fox28.ruier.utils.MFGT;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -47,6 +48,7 @@ public class PatientManagerFragment extends Fragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_add_patient:   // 添加患者
+                MFGT.gotoAddPatient(getActivity());
                 break;
             case R.id.ll_add_group:     //添加新分组
                 break;

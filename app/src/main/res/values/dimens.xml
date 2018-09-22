@@ -3,6 +3,7 @@
     <dimen name="raw_high_56">56dp</dimen>
     <dimen name="raw_high_48">48dp</dimen>
 
+    <!--删除 start-->
     <!--页面字体以16sp为主，标题18sp，注释14sp-->
     <dimen name="title1">22sp</dimen>
     <dimen name="title2">18sp</dimen>
@@ -11,4 +12,26 @@
     <dimen name="title5">12sp</dimen>
     <dimen name="title6">10sp</dimen>
     <dimen name="title7">8sp</dimen>
+    <!--删除end-->
+
+
+
+
+
+    <!--margin-->
+    <dimen name="base_margin_20">20dp</dimen>
+
+
+
+    <dimen name="irc_text_ss">10sp</dimen>
+    <dimen name="irc_text_s">13sp</dimen>
+    <dimen name="irc_text_m">14sp</dimen>
+    <dimen name="irc_text_l">16sp</dimen>
+    <dimen name="irc_text_xl">18sp</dimen>
+    <dimen name="irc_text_xxl">22sp</dimen>
+    <dimen name="fixed_height_bottom_padding">6dp</dimen>
+    <dimen name="divider_h">1dp</dimen>
+    <dimen name="divider_h_30">30dp</dimen>
+    <dimen name="divider_padding_left">12dp</dimen>
+    <dimen name="divider_padding_right">12dp</dimen>
 </resources>

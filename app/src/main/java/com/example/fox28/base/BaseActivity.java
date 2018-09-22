@@ -14,9 +14,8 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
+import com.example.fox28.ruier.R;
 import com.gyf.barlibrary.ImmersionBar;
-import com.irc.ircdoctor.R;
-import com.irc.ircdoctor.common.utils.KeyBoardUtils;
 
 import butterknife.ButterKnife;
 
