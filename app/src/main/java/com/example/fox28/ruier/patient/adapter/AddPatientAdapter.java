@@ -53,6 +53,7 @@ public class AddPatientAdapter extends RecyclerView.Adapter {
     public static final int TYPE_ITEM = 909;
 
 
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View contentView;
@@ -110,20 +111,28 @@ public class AddPatientAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return mList.size();
+        return mList==null? 2 : mList.size()+2;
     }
 
+    /**
+     * 设置列表项的类型
+     * @param position
+     * @return
+     */
     @Override
     public int getItemViewType(int position) {
-        if (position == mList.size() - 1) {
+        if (position == mList.size() + 1) {
             return TYPE_DELETE;
-        } else if (position == mList.size() - 2) {
+        } else if (position == mList.size()) {
             return TYPE_ADD;
         } else {
             return TYPE_ITEM;
         }
     }
 
+    /**
+     * 下面3个是holder类
+     */
     class DeleteHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.rl_parent)
         RelativeLayout rl_parent;

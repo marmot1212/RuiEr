@@ -36,7 +36,7 @@ public class AddGroupActivity extends BaseActivity {
     @Override
     protected void initData() {
         super.initData();
-        mList = DataFactory.obtainListDataForAddGroup(12);
+        mList = DataFactory.obtainListDataForAddGroup(10);
         mAdpater.setList(mList);
     }
 
