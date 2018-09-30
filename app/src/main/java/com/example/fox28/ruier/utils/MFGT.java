@@ -3,6 +3,7 @@ package com.example.fox28.ruier.utils;
 import android.app.Activity;
 import android.content.Intent;
 
+import com.example.fox28.ruier.patient.activity.AddGroupActivity;
 import com.example.fox28.ruier.patient.activity.AddPatientActivity;
 
 
@@ -66,6 +67,16 @@ public class MFGT {
     public static void gotoAddPatient(Activity activity) {
         startActivity(activity, AddPatientActivity.class);
     }
+
+    /**
+     * 跳转添加分组界面
+     * @param activity
+     */
+    public static void gotoAddGroup(Activity activity) {
+        startActivity(activity, AddGroupActivity.class);
+    }
+
+
 
 
 }

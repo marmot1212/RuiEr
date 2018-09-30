@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    android:orientation="vertical"
+    tools:context=".patient.activity.AddGroupActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/base_tool_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:text="分组名称" />
+
+    <EditText
+        android:id="@+id/et_name"
+        style="@style/style_14_999"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:hint="如科室：儿科"
+        android:paddingLeft="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:text="分组成员" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyc_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="25dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        />
+
+</LinearLayout>

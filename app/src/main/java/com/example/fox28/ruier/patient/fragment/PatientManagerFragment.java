@@ -51,6 +51,7 @@ public class PatientManagerFragment extends Fragment {
                 MFGT.gotoAddPatient(getActivity());
                 break;
             case R.id.ll_add_group:     //添加新分组
+                MFGT.gotoAddGroup(getActivity());
                 break;
             case R.id.ll_patientgroup_manager:  //分组管理
                 break;
