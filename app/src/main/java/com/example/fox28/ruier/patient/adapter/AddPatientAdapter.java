@@ -33,6 +33,8 @@ public class AddPatientAdapter extends RecyclerView.Adapter {
 
     public AddPatientAdapter(Context context, List<PGroupMemberEntity> list) {
         mContext = context;
+        list.add(new PGroupMemberEntity());
+        list.add(new PGroupMemberEntity());
         mList = list;
     }
 
@@ -41,6 +43,8 @@ public class AddPatientAdapter extends RecyclerView.Adapter {
      * @param list
      */
     public void setList(List<PGroupMemberEntity> list) {
+        list.add(new PGroupMemberEntity());
+        list.add(new PGroupMemberEntity());
         mList = list;
         notifyDataSetChanged();
     }
@@ -51,6 +55,9 @@ public class AddPatientAdapter extends RecyclerView.Adapter {
     public static final int TYPE_DELETE = 911;
     public static final int TYPE_ADD = 910;
     public static final int TYPE_ITEM = 909;
+
+    private boolean mIsDelete;  // true，代表单击"-"按钮、进入可删除状态
+
 
 
 
@@ -85,6 +92,8 @@ public class AddPatientAdapter extends RecyclerView.Adapter {
                 public void onClick(View view) {
                     // todo 监听事件
                     Toast.makeText(mContext, "单击删除患者按钮", Toast.LENGTH_SHORT).show();
+                    mIsDelete = true;
+                    notifyDataSetChanged();     // 全局刷新数据
                 }
             });
             return;
@@ -96,7 +105,7 @@ public class AddPatientAdapter extends RecyclerView.Adapter {
                 @Override
                 public void onClick(View view) {
                     // todo 监听事件
-                    Toast.makeText(mContext, "单击增加患者按钮", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "单击增加患者按钮——跳转新页面", Toast.LENGTH_SHORT).show();
                 }
             });
             return;
@@ -104,27 +113,35 @@ public class AddPatientAdapter extends RecyclerView.Adapter {
         // 其他列表项
         if (getItemViewType(position) == TYPE_ITEM) {
             ItemHolder holder = (ItemHolder) parentHolder;
-            holder.refreshUI(mList.get(position));
+            holder.refreshUI(mList, position);
         }
 
     }
 
     @Override
     public int getItemCount() {
-        return mList==null? 2 : mList.size()+2;
+        return mList==null? 0 : mList.size();
     }
 
+    /**
+     * 设置列表项的类型
+     * @param position
+     * @return
+     */
     @Override
     public int getItemViewType(int position) {
-        if (position == mList.size() + 1) {
+        if (position == mList.size() -1 ) {
             return TYPE_DELETE;
-        } else if (position == mList.size()) {
+        } else if (position == mList.size()-2 ) {
             return TYPE_ADD;
         } else {
             return TYPE_ITEM;
         }
     }
 
+    /**
+     * 下面3个是holder类
+     */
     class DeleteHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.rl_parent)
         RelativeLayout rl_parent;
@@ -159,11 +176,21 @@ public class AddPatientAdapter extends RecyclerView.Adapter {
         }
 
         // 刷新UI
-       public void refreshUI(PGroupMemberEntity entity) {
-            if(entity==null) return;
-            mTvName.setText(entity.getName());
+       public void refreshUI(final List<PGroupMemberEntity> list, final int position) {
+            if(list.get(position)==null) return;
+            mTvName.setText(list.get(position).getName());
+            mIvDelete.setVisibility(mIsDelete ? View.VISIBLE : View.GONE);
+            mIvDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // 更新数据
+                    list.remove(position);
+                    // 局部刷新
+                    notifyItemRemoved(position);
+                }
+            });
            Glide.with(mContext)
-                   .load(entity.getUrl())
+                   .load(list.get(position).getUrl())
                    .centerCrop()
                    .dontAnimate()//防止设置placeholder导致第一次不显示网络图片,只显示默认图片的问题
                    .error(R.mipmap.patient_member_head)
